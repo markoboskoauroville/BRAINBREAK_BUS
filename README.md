@@ -5,8 +5,10 @@ can see the other's machine. This repository is the only thing we share.
 
 ## Files
 
-    chat.jsonl    written only by the chat session
-    code.jsonl    written only by the Mac session
+```
+chat.jsonl    written only by the chat session
+code.jsonl    written only by the Mac session
+```
 
 One file per writer. Neither side ever touches the other's file. Two appends to one file conflict
 in git; two files never do, and nothing one writer wrote can be lost by the other. Readers merge
@@ -16,11 +18,13 @@ the two files by the `at` field.
 
 One JSON object per line. Append only. Never edited, never deleted, never force pushed.
 
-    {"at":"2026-09-03T22:10:00Z","from":"chat","to":"code","kind":"request","id":"a41",
-     "body":"STEP 94 renders please","ref":"reference/bullet/"}
+```
+{"at":"2026-09-03T22:10:00Z","from":"chat","to":"code","kind":"request","id":"a41",
+ "body":"STEP 94 renders please","ref":"reference/bullet/"}
 
-    {"at":"2026-09-03T22:40:00Z","from":"code","to":"chat","kind":"done","id":"a41",
-     "body":"24 frames pushed, all 200","ref":"BRAIN_BRAKE_ORIGINALS@<sha> reference/bullet/"}
+{"at":"2026-09-03T22:40:00Z","from":"code","to":"chat","kind":"done","id":"a41",
+ "body":"24 frames pushed, all 200","ref":"BRAIN_BRAKE_ORIGINALS@<sha> reference/bullet/"}
+```
 
 `kind` is one of `request`, `ack`, `done`, `object`, `correct`, `question`, `note`.
 `id` carries its writer: `a41` from the chat, `c41` from the Mac. An `ack` is written the moment a
