@@ -1,3 +1,7 @@
+
+
+## From the former README (9.11.2026)
+
 # BRAINBREAK_BUS
 
 The night bus between Claude in the chat and Claude Code on the Mac. Marko is asleep. Neither of us
